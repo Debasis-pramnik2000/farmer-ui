@@ -100,7 +100,7 @@ export default function PaddyRiceRate() {
 
     setLoading(true);
 
-    const queryUrl = `hhttps://farmer-ai-avva.onrender.com/api/mandi/prices?state=${encodeURIComponent(
+    const queryUrl = `https://farmer-ai-avva.onrender.com/api/mandi/prices?state=${encodeURIComponent(
       selectedState
     )}&district=${encodeURIComponent(
       selectedDistrict
