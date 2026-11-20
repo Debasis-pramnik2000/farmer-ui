@@ -43,7 +43,7 @@ export default function SoilTest() {
   useEffect(() => {
     const fetchRegions = async () => {
       try {
-        const res = await fetch("http://localhost:8000/api/profit/regions");
+        const res = await fetch("https://farmer-ai-avva.onrender.com/api/profit/regions");
         if (!res.ok) return;
         const data = await res.json();
         if (data.states && data.states.length > 0) {
@@ -108,7 +108,7 @@ export default function SoilTest() {
     payload.append("soil_feel", formData.soil_feel);
 
     try {
-      const response = await fetch("http://localhost:8000/api/soil-test", {
+      const response = await fetch("https://farmer-ai-avva.onrender.com/api/soil-test", {
         method: "POST",
         body: payload,
       });

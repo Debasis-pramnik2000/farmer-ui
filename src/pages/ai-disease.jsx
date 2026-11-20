@@ -35,7 +35,7 @@ export default function AIDisease({ setResultData }) {
     formData.append("file", selectedFile);
 
     try {
-      const response = await fetch("http://localhost:8000/api/predict", {
+      const response = await fetch("https://farmer-ai-avva.onrender.com/api/predict", {
         method: "POST",
         body: formData,
       });

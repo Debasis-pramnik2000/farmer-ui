@@ -17,7 +17,7 @@ export default function PaddyRiceRate() {
 
   // Load All States, Districts & Markets
   useEffect(() => {
-    fetch("http://localhost:8000/api/mandi/locations")
+    fetch("https://farmer-ai-avva.onrender.com/api/mandi/locations")
       .then((res) => res.json())
       .then((resData) => {
         const fullData = resData.data || {};
@@ -100,7 +100,7 @@ export default function PaddyRiceRate() {
 
     setLoading(true);
 
-    const queryUrl = `http://localhost:8000/api/mandi/prices?state=${encodeURIComponent(
+    const queryUrl = `hhttps://farmer-ai-avva.onrender.com/api/mandi/prices?state=${encodeURIComponent(
       selectedState
     )}&district=${encodeURIComponent(
       selectedDistrict

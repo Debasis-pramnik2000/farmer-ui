@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://farmer-ai-avva.onrender.com";
 
 const FALLBACK_REGIONS = [
   {
