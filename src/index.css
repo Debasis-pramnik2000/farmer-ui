@@ -1,0 +1,406 @@
+/* ---------- Global ---------- */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f7f9f7;
+  color: #222;
+}
+
+/* ---------- Navbar ---------- */
+.kb-navbar {
+  background-color: #1b5e20;
+  padding: 12px 0;
+}
+
+.kb-brand {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.kb-link {
+  color: #e8f5e9 !important;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.kb-link:hover {
+  color: #ffeb3b !important;
+}
+
+/* ---------- Logout Button ---------- */
+.kb-logout-btn {
+  background-color: #ffeb3b;
+  color: #1b5e20;
+  font-weight: 700;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.kb-logout-btn:hover {
+  background-color: #fdd835;
+  color: #1b5e20;
+}
+
+/* ---------- Back to Dashboard Button ---------- */
+.kb-back-btn {
+  background-color: #ffffff;
+  color: #1b5e20;
+  font-weight: 600;
+  border: 2px solid #1b5e20;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.kb-back-btn:hover {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+/* ---------- Slider ---------- */
+.kb-slider {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.kb-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.kb-slide.active {
+  opacity: 1;
+}
+
+.kb-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kb-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.kb-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #ffffffaa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.kb-dot.active {
+  background: #ffeb3b;
+}
+
+/* ---------- Home Cards ---------- */
+.kb-cards {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.kb-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.kb-card:hover {
+  transform: translateY(-5px);
+}
+
+.kb-card h5 {
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+/* ---------- Forms ---------- */
+.kb-form-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+.kb-form-box {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kb-form-title {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.kb-btn {
+  background-color: #1b5e20;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+  border: none;
+}
+
+.kb-btn:hover {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+/* ---------- Password Eye ---------- */
+.kb-pass-wrap {
+  position: relative;
+}
+
+.kb-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ---------- Switch Login/Register ---------- */
+.kb-switch-text {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.kb-switch-link {
+  color: #1b5e20;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kb-switch-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Dashboard ---------- */
+.kb-dash-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-dash-title {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.kb-dash-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e8f0e8;
+}
+
+.kb-dash-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(27, 94, 32, 0.18);
+  border-color: #1b5e20;
+}
+
+.kb-dash-img-box {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+.kb-dash-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.kb-dash-card:hover .kb-dash-img-box img {
+  transform: scale(1.08);
+}
+
+.kb-dash-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #ffffff;
+  border-top: 2px solid #f1f8f1;
+  transition: background 0.3s ease;
+}
+
+.kb-dash-card:hover .kb-dash-info {
+  background: #f1f8f1;
+}
+
+.kb-dash-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.kb-dash-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1b5e20;
+  line-height: 1.25;
+}
+
+/* ---------- User Info Page ---------- */
+.kb-userinfo-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-userinfo-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.kb-photo-section {
+  flex: 1 1 220px;
+  text-align: center;
+}
+
+.kb-profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1b5e20;
+  margin-bottom: 15px;
+}
+
+.kb-info-section {
+  flex: 2 1 320px;
+}
+
+.kb-info-section p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+/* ---------- Rice Rate Page ---------- */
+.kb-rice-wrap {
+  padding: 40px 15px 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kb-rice-select {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.kb-rice-select select,
+.kb-rice-select button {
+  flex: 1 1 200px;
+}
+
+.kb-rice-table-wrap {
+  margin-bottom: 40px;
+}
+
+.kb-rice-table-wrap h4 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.kb-table-scroll {
+  max-height: 450px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.kb-table-scroll table {
+  margin: 0;
+}
+
+/* ---------- Live Blinking Badge ---------- */
+/* ---------- Live Blinking Badge ---------- */
+.kb-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffebee;
+  color: #c62828;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.kb-live-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #e53935;
+  border-radius: 50%;
+  animation: kb-blink 0.8s ease-in-out infinite;
+  -webkit-animation: kb-blink 0.8s ease-in-out infinite;
+}
+
+@keyframes kb-blink {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7);
+  }
+  50% {
+    opacity: 0.4;
+    box-shadow: 0 0 0 6px rgba(229, 57, 53, 0);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+  }
+}
+
+@-webkit-keyframes kb-blink {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.4; }
+  100% { opacity: 1; }
+}

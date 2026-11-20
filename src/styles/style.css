@@ -1,0 +1,1786 @@
+/* ---------- Global & Mobile Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f7f9f7;
+  color: #222;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Navbar ---------- */
+.kb-navbar {
+  background-color: #1b5e20;
+  padding: 12px 0;
+}
+
+.kb-brand {
+  color: #fff !important;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.kb-link {
+  color: #e8f5e9 !important;
+  margin-left: 10px;
+  font-weight: 500;
+}
+
+.kb-link:hover {
+  color: #ffeb3b !important;
+}
+
+.kb-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.kb-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ---------- Slider ---------- */
+.kb-slider {
+  position: relative;
+  width: 100%;
+  height: 71vh;
+  overflow: hidden;
+}
+
+.kb-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.kb-slide.active {
+  opacity: 1;
+}
+
+.kb-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kb-dots {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.kb-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #ffffffaa;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.kb-dot.active {
+  background: #ffeb3b;
+}
+
+/* ---------- Home Cards ---------- */
+.kb-cards {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.kb-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.kb-card:hover {
+  transform: translateY(-5px);
+}
+
+.kb-card h5 {
+  color: #1b5e20;
+  font-weight: 700;
+}
+
+/* ---------- Forms ---------- */
+.kb-form-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+.kb-form-box {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.kb-form-title {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.kb-btn {
+  background-color: #1b5e20;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.kb-btn:hover {
+  background-color: #2e7d32;
+  color: #fff;
+}
+
+/* ---------- Password Eye ---------- */
+.kb-pass-wrap {
+  position: relative;
+}
+
+.kb-eye {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+/* ---------- Switch Login/Register ---------- */
+.kb-switch-text {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.kb-switch-link {
+  color: #1b5e20;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.kb-switch-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Dashboard ---------- */
+.kb-dash-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-dash-title {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.kb-dash-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #e8f0e8;
+}
+
+.kb-dash-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(27, 94, 32, 0.18);
+  border-color: #1b5e20;
+}
+
+.kb-dash-img-box {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+.kb-dash-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.kb-dash-card:hover .kb-dash-img-box img {
+  transform: scale(1.08);
+}
+
+.kb-dash-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #ffffff;
+  border-top: 2px solid #f1f8f1;
+  transition: background 0.3s ease;
+}
+
+.kb-dash-card:hover .kb-dash-info {
+  background: #f1f8f1;
+}
+
+.kb-dash-icon {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.kb-dash-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1b5e20;
+  line-height: 1.25;
+}
+
+/* ---------- User Info Page ---------- */
+.kb-userinfo-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-userinfo-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.kb-photo-section {
+  flex: 1 1 220px;
+  text-align: center;
+}
+
+.kb-profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1b5e20;
+  margin-bottom: 15px;
+}
+
+.kb-info-section {
+  flex: 2 1 320px;
+}
+
+.kb-info-section p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* ---------- Logout & Back Buttons ---------- */
+.kb-logout-btn {
+  background-color: #ffeb3b;
+  color: #1b5e20;
+  font-weight: 700;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.kb-logout-btn:hover {
+  background-color: #fdd835;
+  color: #1b5e20;
+}
+
+.kb-back-btn {
+  background-color: #ffffff;
+  color: #1b5e20;
+  font-weight: 600;
+  border: 2px solid #1b5e20;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  transition: background 0.3s ease;
+}
+
+.kb-back-btn:hover {
+  background-color: #1b5e20;
+  color: #fff;
+}
+
+/* ---------- Rice Rate Page ---------- */
+.kb-rice-wrap {
+  padding: 40px 15px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.kb-rice-select {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.kb-rice-select select,
+.kb-rice-select button {
+  flex: 1 1 200px;
+}
+
+.kb-rice-table-wrap {
+  margin-bottom: 40px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.kb-rice-table-wrap h4,
+.kb-rice-chart h4 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.kb-rice-chart {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.kb-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffebee;
+  color: #c62828;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.kb-live-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #e53935;
+  border-radius: 50%;
+  animation: kb-blink 0.8s ease-in-out infinite;
+}
+
+@keyframes kb-blink {
+  0% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7);
+  }
+  50% {
+    opacity: 0.4;
+    box-shadow: 0 0 0 6px rgba(229, 57, 53, 0);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+  }
+}
+
+/* ---------- Vegetable Page ---------- */
+.kb-veg-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-veg-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.kb-veg-filter select {
+  flex: 1 1 250px;
+}
+
+.kb-veg-table-wrap {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.kb-veg-date {
+  font-weight: 600;
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.kb-veg-table thead {
+  background: #1b5e20;
+  color: #fff;
+}
+
+.kb-veg-table th,
+.kb-veg-table td {
+  vertical-align: middle;
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+/* ---------- Scheme Page ---------- */
+.kb-scheme-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-scheme-filter {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.kb-scheme-filter select {
+  flex: 1 1 250px;
+}
+
+.kb-scheme-card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e8f0e8;
+}
+
+.kb-scheme-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(27, 94, 32, 0.18);
+  border-color: #1b5e20;
+}
+
+.kb-scheme-img-box {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.kb-scheme-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.kb-scheme-card:hover .kb-scheme-img-box img {
+  transform: scale(1.08);
+}
+
+.kb-scheme-body {
+  padding: 14px;
+}
+
+.kb-scheme-title {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.kb-scheme-desc {
+  color: #555;
+  font-size: 0.85rem;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Scheme Details */
+.kb-scheme-detail-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.kb-scheme-detail-img-box {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.kb-scheme-detail-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kb-scheme-detail-title {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.kb-scheme-detail-cat {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.kb-scheme-section {
+  margin-bottom: 18px;
+}
+
+.kb-scheme-section h5 {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.kb-scheme-section p,
+.kb-scheme-section ul {
+  color: #444;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.kb-scheme-section ul {
+  padding-left: 20px;
+}
+
+.kb-apply-btn {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+/* ---------- Basic Info Page ---------- */
+.kb-basic-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-basic-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.kb-basic-heading {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e8f0e8;
+  padding-bottom: 10px;
+}
+
+.kb-basic-section p {
+  color: #444;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.kb-basic-section p:last-child {
+  margin-bottom: 0;
+}
+
+.kb-basic-list {
+  color: #444;
+  font-size: 0.97rem;
+  line-height: 1.9;
+  padding-left: 22px;
+  margin: 0;
+}
+
+.kb-basic-list li {
+  margin-bottom: 8px;
+}
+
+.kb-basic-list b {
+  color: #1b5e20;
+}
+
+/* ---------- Weather Page ---------- */
+.kb-weather-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-allow-location {
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.kb-loc-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.kb-allow-location h4 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.kb-allow-location p {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.kb-current-weather {
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  color: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(27, 94, 32, 0.25);
+}
+
+.kb-curr-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.kb-curr-icon {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.kb-curr-temp {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kb-curr-cond {
+  font-size: 1.1rem;
+  margin-top: 6px;
+}
+
+.kb-curr-loc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 6px;
+}
+
+.kb-curr-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 25px;
+  align-self: center;
+}
+
+.kb-curr-item {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.kb-curr-item span {
+  opacity: 0.85;
+}
+
+.kb-curr-item b {
+  font-size: 1.05rem;
+  margin-top: 2px;
+}
+
+.kb-weather-advice {
+  background: #fff8e1;
+  border-left: 5px solid #ffb300;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 25px;
+}
+
+.kb-weather-advice h5 {
+  color: #b26a00;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.kb-weather-advice p {
+  color: #5d4037;
+  margin: 0;
+  font-size: 0.97rem;
+}
+
+.kb-weather-section {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.kb-weather-heading {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #e8f0e8;
+  padding-bottom: 8px;
+}
+
+.kb-hourly-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.kb-hour-card {
+  background: #f7f9f7;
+  border-radius: 12px;
+  padding: 15px 10px;
+  text-align: center;
+  border: 1px solid #e8f0e8;
+}
+
+.kb-hour-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1b5e20;
+  margin-bottom: 8px;
+}
+
+.kb-hour-icon {
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.kb-hour-temp {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.kb-hour-rain {
+  font-size: 0.82rem;
+  color: #0277bd;
+  margin-top: 4px;
+}
+
+.kb-daily-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.kb-daily-row {
+  display: grid;
+  grid-template-columns: 1.3fr 0.6fr 1.5fr 1fr 0.8fr;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f7f9f7;
+  border-radius: 10px;
+  font-size: 0.93rem;
+  border: 1px solid #e8f0e8;
+}
+
+.kb-daily-day {
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+.kb-daily-icon {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.kb-daily-cond {
+  color: #555;
+}
+
+.kb-daily-temp b {
+  color: #222;
+}
+
+.kb-daily-rain {
+  color: #0277bd;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.kb-weather-alerts {
+  margin-bottom: 20px;
+}
+
+.kb-alert-item {
+  background: #ffebee;
+  color: #b71c1c;
+  border-left: 5px solid #c62828;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 0.93rem;
+}
+
+.kb-weather-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kb-weather-updated {
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.kb-small-btn {
+  background: #fff;
+  color: #1b5e20;
+  border: 1.5px solid #1b5e20;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.kb-small-btn:hover {
+  background: #1b5e20;
+  color: #fff;
+}
+
+.kb-sun-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.kb-sun-item {
+  background: linear-gradient(135deg, #fff9c4, #ffe082);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.kb-sun-item span {
+  font-weight: 600;
+  color: #6d4c41;
+  font-size: 0.95rem;
+}
+
+.kb-sun-item b {
+  color: #4e342e;
+  font-size: 1.15rem;
+}
+
+.kb-aqi-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.kb-aqi-box h5 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.kb-aqi-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.kb-aqi-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f7f9f7;
+  padding: 12px 8px;
+  border-radius: 10px;
+}
+
+.kb-aqi-item span {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.kb-aqi-item b {
+  font-size: 1.05rem;
+}
+
+.kb-crop-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.kb-crop-box h5 {
+  color: #1b5e20;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.kb-crop-advice {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #e8f5e9;
+  border-left: 4px solid #2e7d32;
+  border-radius: 8px;
+  color: #1b5e20;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+.kb-graph-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.kb-graph-inner {
+  display: flex;
+  gap: 8px;
+  min-width: max-content;
+  padding: 5px 2px;
+}
+
+.kb-graph-col {
+  width: 40px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.kb-graph-bar-wrap {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  padding: 0 4px;
+}
+
+.kb-graph-bar-temp {
+  width: 12px;
+  background: linear-gradient(to top, #ff8f00, #ffca28);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s;
+}
+
+.kb-graph-bar-rain {
+  width: 12px;
+  background: linear-gradient(to top, #0277bd, #4fc3f7);
+  border-radius: 4px 4px 0 0;
+  transition: height 0.4s;
+}
+
+.kb-graph-label {
+  font-size: 0.68rem;
+  color: #666;
+  margin-top: 6px;
+}
+
+.kb-graph-legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 14px;
+  font-size: 0.82rem;
+  color: #555;
+}
+
+.kb-legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.kb-legend-temp {
+  background: #ffca28;
+}
+
+.kb-legend-rain {
+  background: #4fc3f7;
+}
+
+/* ---------- Shops Page ---------- */
+.kb-shop-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-shop-filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.kb-shop-filter-label {
+  font-weight: 600;
+  color: #1b5e20;
+  font-size: 0.95rem;
+}
+
+.kb-radius-select {
+  max-width: 150px;
+  border: 1.5px solid #1b5e20;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #1b5e20;
+}
+
+.kb-shop-map-wrap {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
+}
+
+.kb-shop-map {
+  width: 100%;
+  height: 380px;
+}
+
+.kb-user-marker {
+  background: transparent;
+}
+
+.kb-user-dot {
+  width: 20px;
+  height: 20px;
+  background: #2196f3;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.3);
+  animation: kbPulse 2s infinite;
+}
+
+@keyframes kbPulse {
+  0% {
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(33, 150, 243, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.3);
+  }
+}
+
+.kb-shop-marker {
+  background: transparent;
+}
+
+.kb-shop-pin {
+  width: 32px;
+  height: 32px;
+  background: #1b5e20;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  border: 2px solid #fff;
+}
+
+.kb-popup {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.kb-popup b {
+  color: #1b5e20;
+}
+
+.kb-popup span {
+  color: #0277bd;
+}
+
+.kb-shop-list {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.kb-shop-list-heading {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 15px;
+}
+
+.kb-shop-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e8f0e8;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.kb-shop-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(27, 94, 32, 0.12);
+  border-color: #1b5e20;
+}
+
+.kb-shop-photo {
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f7f9f7;
+}
+
+.kb-shop-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kb-shop-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  background: #e8f5e9;
+}
+
+.kb-shop-info,
+.kb-shop-card-left {
+  flex: 1;
+}
+
+.kb-shop-name {
+  font-weight: 700;
+  color: #1b5e20;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.kb-shop-address,
+.kb-shop-hours,
+.kb-shop-distance {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 3px;
+}
+
+.kb-shop-distance {
+  color: #0277bd;
+  font-weight: 600;
+}
+
+.kb-shop-actions {
+  flex-shrink: 0;
+}
+
+.kb-shop-card-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+}
+
+.kb-shop-btn,
+.kb-details-btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.kb-call-btn,
+.kb-details-btn {
+  background: #1b5e20;
+  color: #fff;
+}
+
+.kb-call-btn:hover,
+.kb-details-btn:hover {
+  background: #2e7d32;
+}
+
+.kb-dir-btn {
+  background: #fff;
+  color: #1b5e20;
+  border: 2px solid #1b5e20;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.kb-dir-btn:hover {
+  background: #1b5e20;
+  color: #fff;
+}
+
+/* Shop Detail Page */
+.kb-shop-detail-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-shop-detail-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.kb-shop-detail-photo {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.kb-shop-detail-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.kb-shop-detail-title {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.kb-shop-detail-section {
+  margin-bottom: 15px;
+}
+
+.kb-shop-detail-section h5 {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.kb-shop-detail-section p {
+  color: #444;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.kb-shop-detail-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Login Tabs ---------- */
+.kb-tab-switch {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e8f0e8;
+}
+
+.kb-tab {
+  flex: 1;
+  padding: 10px;
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.kb-tab.active {
+  color: #1b5e20;
+  border-bottom-color: #1b5e20;
+}
+
+/* ---------- Admin ---------- */
+.kb-admin-wrap {
+  padding: 40px 15px 60px;
+}
+
+.kb-admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.kb-admin-table-wrap {
+  background: #fff;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.kb-admin-table th {
+  background: #1b5e20;
+  color: #fff;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.kb-admin-table td {
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.kb-admin-thumb {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.kb-edit-btn {
+  background: #0277bd;
+  color: #fff;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
+
+.kb-del-btn {
+  background: #c62828;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.kb-photo-preview {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #1b5e20;
+}
+
+.kb-admin-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.kb-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 14px;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.kb-stat-users {
+  background: linear-gradient(135deg, #1565c0, #42a5f5);
+}
+
+.kb-stat-shops {
+  background: linear-gradient(135deg, #1b5e20, #4caf50);
+}
+
+.kb-stat-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.kb-stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.kb-stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
+.kb-admin-section {
+  margin-bottom: 40px;
+}
+
+.kb-admin-section-title {
+  color: #1b5e20;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e8f0e8;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE OVERRIDES (<= 768px & <= 480px)
+   ========================================================= */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+
+  /* Navbar */
+  .kb-brand {
+    font-size: 1.2rem;
+  }
+
+  .kb-navbar .navbar-nav {
+    padding-top: 10px;
+    gap: 6px;
+  }
+
+  .kb-link {
+    margin-left: 0;
+  }
+
+  .kb-back-btn,
+  .kb-logout-btn {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Slider */
+  .kb-slider {
+    height: 35vh;
+  }
+
+  /* Forms */
+  .kb-form-wrap {
+    padding: 20px 12px;
+  }
+
+  .kb-form-box {
+    padding: 20px 16px;
+  }
+
+  /* Dashboard */
+  .kb-dash-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-dash-title {
+    font-size: 1.35rem;
+    margin-bottom: 20px;
+  }
+
+  .kb-dash-img-box {
+    height: 130px;
+  }
+
+  .kb-dash-text {
+    font-size: 0.85rem;
+  }
+
+  /* User Info */
+  .kb-userinfo-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-userinfo-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 16px;
+    gap: 18px;
+  }
+
+  .kb-photo-section,
+  .kb-info-section {
+    width: 100%;
+  }
+
+  .kb-profile-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Rice & Vegetable Tables */
+  .kb-rice-wrap,
+  .kb-veg-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-rice-select {
+    flex-direction: column;
+  }
+
+  .kb-veg-table-wrap {
+    padding: 12px;
+  }
+
+  .kb-veg-table th,
+  .kb-veg-table td {
+    font-size: 0.82rem;
+    padding: 6px;
+  }
+
+  /* Schemes */
+  .kb-scheme-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-scheme-img-box {
+    height: 130px;
+  }
+
+  .kb-scheme-detail-box {
+    padding: 18px 15px;
+  }
+
+  .kb-scheme-detail-img-box {
+    height: 160px;
+  }
+
+  /* Basic Info */
+  .kb-basic-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-basic-section {
+    padding: 20px 16px;
+  }
+
+  .kb-basic-heading {
+    font-size: 1.1rem;
+  }
+
+  .kb-basic-section p,
+  .kb-basic-list {
+    font-size: 0.92rem;
+  }
+
+  /* Weather */
+  .kb-weather-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-current-weather {
+    padding: 20px 16px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kb-curr-left {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .kb-curr-icon {
+    font-size: 3rem;
+  }
+
+  .kb-curr-temp {
+    font-size: 2.2rem;
+  }
+
+  .kb-curr-right {
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 10px 15px;
+  }
+
+  .kb-hourly-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kb-daily-row {
+    grid-template-columns: 1.5fr 0.6fr 1.5fr 1fr 0.7fr;
+    font-size: 0.82rem;
+    padding: 10px 8px;
+  }
+
+  .kb-daily-cond {
+    font-size: 0.78rem;
+  }
+
+  .kb-aqi-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .kb-sun-row {
+    grid-template-columns: 1fr;
+  }
+
+  .kb-weather-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Shops */
+  .kb-shop-wrap,
+  .kb-shop-detail-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-shop-map {
+    height: 280px;
+  }
+
+  .kb-shop-card {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 14px;
+  }
+
+  .kb-shop-photo {
+    width: 100%;
+    height: 160px;
+  }
+
+  .kb-shop-card-right {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .kb-shop-btn,
+  .kb-details-btn {
+    flex: 1;
+    width: 100%;
+  }
+
+  .kb-shop-detail-card {
+    padding: 20px 16px;
+  }
+
+  .kb-shop-detail-photo {
+    height: 200px;
+  }
+
+  /* Admin */
+  .kb-admin-wrap {
+    padding: 24px 12px 40px;
+  }
+
+  .kb-admin-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .kb-slider {
+    height: 28vh;
+  }
+
+  .kb-dash-img-box {
+    height: 120px;
+  }
+
+  .kb-dash-text {
+    font-size: 0.82rem;
+  }
+
+  .kb-dash-icon {
+    font-size: 1rem;
+  }
+
+  .kb-curr-temp {
+    font-size: 1.8rem;
+  }
+
+  .kb-curr-icon {
+    font-size: 2.4rem;
+  }
+
+  .kb-daily-row {
+    grid-template-columns: 1.4fr 0.5fr 1fr 1fr 0.7fr;
+    font-size: 0.75rem;
+  }
+
+  .kb-daily-cond {
+    display: none;
+  }
+}
